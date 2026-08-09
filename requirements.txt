@@ -1,0 +1,66 @@
+﻿fastapi==0.115.5
+uvicorn[standard]==0.30.6
+python-multipart==0.0.9
+faster-whisper
+requests
+
+# ============================================================================
+# DÉPENDANCES OPTIONNELLES - Analyses Avancées
+# Installe celles que tu veux utiliser
+# ============================================================================
+
+# spaCy - Analyse grammaticale française (RECOMMANDÉ)
+# pip install spacy
+# python -m spacy download fr_core_news_md
+spacy>=3.7.0
+
+# librosa - Analyse audio/prosodie (pitch detection)
+# Plus léger que pyannote, recommandé
+librosa>=0.10.0
+
+# webrtcvad - Voice Activity Detection (silences réels)
+webrtcvad>=2.0.10
+
+# silero-vad - VAD plus précis (nécessite torch)
+silero-vad>=5.1.2
+torch>=2.1.0
+
+# WhisperX - alignement plus précis des mots (cuts plus propres)
+# Optionnel: fallback automatique sur faster-whisper si indisponible
+whisperx>=3.1.0
+
+# KeyBERT - Extraction automatique de mots-clés
+keybert>=0.8.5
+sentence-transformers>=2.6.0
+
+# pyannote.audio - Speaker diarization (qui parle quand)
+# ATTENTION: Nécessite un token Hugging Face pour certains modèles
+# pip install pyannote.audio
+# Optionnel car lourd (2-3GB de modèles)
+# pyannote.audio>=3.1.0
+
+# PySceneDetect - Détection de changements de scène vidéo
+# Léger et utile
+scenedetect[opencv]>=0.6.0
+
+# FER - Détection d'émotions faciales (optionnel)
+# Nécessite opencv + tensorflow (ou backend compatible)
+# fer>=22.5.1
+
+# Détection objet voiture (YOLO, optionnel)
+# Fournit un vrai signal "voiture visible" image par image
+ultralytics>=8.3.0
+
+# YAMNet (AudioSet) - IA audio pour départ/arrêt moteur
+# Optionnel et lourd:
+# tensorflow>=2.16.0
+# tensorflow-hub>=0.16.1
+
+# openSMILE - Signaux prosodiques voix (optionnel, attention licence commerciale)
+opensmile>=2.5.0
+
+# inaSpeechSegmenter - Contexte audio speech/music/noise
+inaSpeechSegmenter>=0.8.0
+
+# numpy - Déjà requis par faster-whisper, mais on le précise
+numpy>=1.24.0
